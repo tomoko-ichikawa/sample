@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'dotenv-rails'
+gem 'unicorn' # アプリケーションサーバのunicorn
+gem 'mini_racer', platforms: :ruby # デプロイ時に必要
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +49,11 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano', '3.6.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
